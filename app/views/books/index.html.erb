@@ -19,8 +19,7 @@
 
 <h2>New Book</h2>
 
-<form class ="new-book">
- <%= form_with model: @Book,url: '/books', method: :post do |f| %>
+ <%= form_with model: @book, url: "/books",  method: :post do |f| %>
  <div class ="field">
   <div class ="bool-title">Title</div>
   <div class ="book-title"><%= f.text_field :title %></div>
@@ -31,7 +30,6 @@
  </div>
  <div class = "action"><%= f.submit 'Create Book' %></div>
  <% end %>
-</form>
 
 
 <h1>Books#index</h1>
