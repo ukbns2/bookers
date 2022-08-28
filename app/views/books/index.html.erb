@@ -19,17 +19,19 @@
 
 <h2>New Book</h2>
 
-<%= form_with model: @Book,url: '/books', method: :post do |f| %>
-
-<h4>Title</h4>
-<%= f.text_field :title %>
-
-<h4>Body</h4>
-<%= f.text_area :body %>
-
-<%= f.submit 'Create Book' %>
-
-<% end %>
+<form class ="new-book">
+ <%= form_with model: @Book,url: '/books', method: :post do |f| %>
+ <div class ="field">
+  <div class ="bool-title">Title</div>
+  <div class ="book-title"><%= f.text_field :title %></div>
+ </div>
+ <div class ="field">
+  <div class ="book-body">Body</div>
+  <div class ="book-body"><%= f.text_area :body %></div>
+ </div>
+ <div class = "action"><%= f.submit 'Create Book' %></div>
+ <% end %>
+</form>
 
 
 <h1>Books#index</h1>
